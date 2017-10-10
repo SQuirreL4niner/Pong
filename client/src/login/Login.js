@@ -5,6 +5,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
 
+import './Login.css';
+
 class Login extends Component {
   constructor(props){
     super(props);
@@ -58,11 +60,13 @@ class Login extends Component {
         <MuiThemeProvider>
           <div>
             <AppBar title="Login" />
-            <TextField hintText="Enter username" floatingLabelText="Username"
-                      onChange={(event, newValue) => this.setState({name:newValue})}/>
-            <br/>
-            <RaisedButton label="Submit" primary={true} style={style}
-                      onClick={(event) => this.handleClick(event)}/>
+            <div className="center">
+              <TextField style={style} hintText="Enter username" floatingLabelText="Username"
+                        onChange={(event, newValue) => this.setState({name:newValue})}/>
+              <br/>
+              <RaisedButton label="Submit" primary={true} style={style}
+                        onClick={(event) => this.handleClick(event)}/>
+            </div>
           </div>
         </MuiThemeProvider>
       </div>
