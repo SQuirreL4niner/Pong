@@ -14,7 +14,7 @@ router.use(cors());
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   request({
-    uri: 'http://pong-full-stack-ahead.herokuapp.com/leaderboard'
+    uri: 'http://pong-full-stack-ahead-pong-api.herokuapp.com/player/leaderboard'
   }).pipe(res);
 });
 
